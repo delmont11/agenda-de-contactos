@@ -1,0 +1,340 @@
+/**CUSTOM PROPERTIES**/
+
+:root {
+    --primario: #7571A8;
+    --primarioOscuro: #42405f;
+    --secundario: #E1DEFF;
+    --terciario: #C2BDF5;
+    --compl1: #A89738;
+    --compl2: #F5DC4E;
+    --fontPrimaria: 'Arial', Helvetica, sans-serif;
+    --fontSecundaria: 'Poppins', sans-serif;
+}
+
+
+/**GLOBALES**/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primario);
+    font-family: var(--fontPrimaria);
+}
+
+h1,
+h2 {
+    font-family: var(--fontSecundaria);
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    height: 4rem;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+}
+
+::placeholder {
+    font-size: 1.5rem;
+}
+
+
+/*UTILIDADES*/
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 10px 34px -17px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 10px 10px 34px -17px rgba(0, 0, 0, 0.61);
+    box-shadow: 10px 10px 34px -17px rgba(0, 0, 0, 0.61);
+}
+
+.barra {
+    background-color: var(--primarioOscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 63px;
+    max-height: 63px;
+}
+
+.barra h1 {
+    text-transform: uppercase;
+}
+
+
+/*BOTONES*/
+
+.boton {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-volver {
+    color: var(--compl2);
+    font-size: 4rem;
+}
+
+
+/**INDEX**/
+
+
+/*FORMULARIO*/
+
+.agregar-contacto {
+    background-color: var(--compl2);
+    border-radius: .5rem;
+    width: 95%;
+    padding-bottom: 3rem;
+}
+
+form {
+    padding: 3rem 2rem;
+    margin-top: 1rem;
+}
+
+form legend {
+    font-family: var(--fontSecundaria);
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+}
+
+legend span {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    clear: both;
+    display: block;
+}
+
+.campos {
+    margin-top: 2rem;
+}
+
+@media (min-width:768px) {
+    .campos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.campo {
+    padding: .5rem 0;
+}
+
+.campo label {
+    font-size: 2rem;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
+
+.enviar input {
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    border-radius: .5rem;
+    transition: background-color .2s ease-in-out;
+    flex: 1;
+}
+
+.enviar input:hover,
+.enviar input:active {
+    background-color: var(--primarioOscuro);
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .campos {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+    .campo {
+        flex: 0 0 calc(33% - 1rem);
+    }
+    .enviar input {
+        flex: 0 0 auto;
+    }
+}
+
+
+/*CONTACTOS*/
+
+.contactos {
+    width: 95%;
+    background-color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 3rem 1rem;
+    border-radius: .5rem;
+}
+
+.lista-contactos {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.lista-contactos h2 {
+    color: var(--primario);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.total-contactos {
+    font-family: var(--fontSecundaria);
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--primario);
+    font-size: 2rem;
+}
+
+.total-contactos span {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+input#buscar {
+    border: 1px solid var(--primario);
+}
+
+
+/*TABLA*/
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr td:nth-child(3) {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 50px;
+}
+
+.tabla-contactos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-contactos thead {
+    background-color: var(--primario);
+    color: white;
+    padding: 1rem;
+}
+
+.tabla-contactos thead th {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.tabla-contactos tbody td {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.tabla-contactos tbody td:nth-child(4) {
+    text-align: center;
+    padding: 0;
+}
+
+.lista-contactos button {
+    background-color: transparent;
+    border: none;
+}
+
+.boton-borrar {
+    color: var(--primario);
+}
+
+.boton-editar {
+    color: var(--compl1);
+}
+
+
+/**EDITAR CONTACTO**/
+
+.contenedor-editar {
+    width: 95%;
+    background-color: var(--compl2);
+}
+
+.barra-editar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.guardado {
+    color: var(--primarioOscuro);
+    font-size: 4rem;
+}
+
+
+/*NOTIFICACIONES*/
+
+.notificacion {
+    position: fixed;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 40rem;
+    top: 7.8rem;
+    left: 50vw;
+    right: 50vw;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    padding: .5rem 3rem;
+    opacity: 0;
+    border-radius: 2rem;
+    transition: opacity .1s ease-in-out;
+}
+
+
+/*corregir la ubicacion con el mediaquery*/
+
+.visible {
+    opacity: 1;
+}
+
+.exito {
+    background-color: rgb(40, 161, 3);
+    color: white;
+}
+
+.error {
+    background-color: red;
+    color: white;
+}
